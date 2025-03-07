@@ -5,10 +5,11 @@ import { first, last } from 'rxjs';
 import { MostrarMensajeComponent } from './mostrar-mensaje/mostrar-mensaje.component';
 import { ReplicadorComponent } from './replicador/replicador.component';
 import { Replicador2Component } from './replicador/replicador2/replicador2.component';
+import { ForComponent } from './for/for.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,TarjetaProductoComponent,MostrarMensajeComponent,ReplicadorComponent,Replicador2Component],
+  imports: [RouterOutlet,TarjetaProductoComponent,MostrarMensajeComponent,ReplicadorComponent,Replicador2Component,ForComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
