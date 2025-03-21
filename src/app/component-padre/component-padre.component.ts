@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, viewChild,ElementRef, ViewChild} from '@angular/core';
 import { ComponentHijoComponent } from './component-hijo/component-hijo.component';
 
 
@@ -9,5 +9,8 @@ import { ComponentHijoComponent } from './component-hijo/component-hijo.componen
   styleUrl: './component-padre.component.css'
 })
 export class ComponentPadreComponent {
+
+  @ViewChild('cambiarMensaje') cambiar !: string;
+
   
 }

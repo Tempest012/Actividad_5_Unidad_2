@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output} from '@angular/core';
 
 
 @Component({
@@ -8,16 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './component-hijo.component.css'
 })
 export class ComponentHijoComponent {
-  hijo="Hola, soy el hijo"
-  private titulo="Orgullo UTS"
+  mensaje:string ="Mensaje desde el componente hijo";
 
-  //Manera con TypeScript
-  get mostrarTitulo(){
-    return this.titulo;
-  }
-
-  //Manera con JavaScript
-  getTitulo(){
-    return this.titulo;
+  cambiarMensaje(nuevoMensaje : string){
+    this.mensaje = nuevoMensaje;
   }
 }

@@ -6,10 +6,11 @@ import { MostrarMensajeComponent } from './mostrar-mensaje/mostrar-mensaje.compo
 import { ReplicadorComponent } from './replicador/replicador.component';
 import { Replicador2Component } from './replicador/replicador2/replicador2.component';
 import { ForComponent } from './for/for.component';
+import { MENSAJESComponent } from './mensajes/mensajes.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,TarjetaProductoComponent,MostrarMensajeComponent,ReplicadorComponent,Replicador2Component,ForComponent],
+  imports: [RouterOutlet,TarjetaProductoComponent,MostrarMensajeComponent,ReplicadorComponent,Replicador2Component,ForComponent,MENSAJESComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
