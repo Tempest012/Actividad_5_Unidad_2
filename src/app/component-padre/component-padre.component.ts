@@ -9,8 +9,17 @@ import { ComponentHijoComponent } from './component-hijo/component-hijo.componen
   styleUrl: './component-padre.component.css'
 })
 export class ComponentPadreComponent {
+  mensajePadre: string="Hola desde el Padre"
+  mensajeOutput: string='';
+  recibirNotificacion(mensajeOutput: string){
+    this.mensajeOutput=mensajeOutput;
+  }
 
-  @ViewChild('cambiarMensaje') cambiar !: string;
+  @ViewChild(ComponentHijoComponent) componenteHijo !: ComponentHijoComponent;
+
+  cambiarMensajeHijo(){
+    this.componenteHijo.cambiarMensaje("Mensaje actualizado desde el componente padre");
+  }
 
   
 }

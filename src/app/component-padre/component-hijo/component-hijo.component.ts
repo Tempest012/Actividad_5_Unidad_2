@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output} from '@angular/core';
+import { Component, EventEmitter, Output,Input} from '@angular/core';
 
 
 @Component({
@@ -12,5 +12,13 @@ export class ComponentHijoComponent {
 
   cambiarMensaje(nuevoMensaje : string){
     this.mensaje = nuevoMensaje;
+  }
+
+  @Input() mensajesinput!: string;
+
+  @Output() notificarPadre = new EventEmitter<string>();
+
+  enviarMensaje(){
+    this.notificarPadre.emit("Mensaje desde el componente hijo al padre");
   }
 }

@@ -5,9 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class MensajesServiceService {
 
-  mensaje : string ="Hola";
+  private mensaje : string ="Hola desde el servicio de mensajes";
 
-  mostraMensaje(){
+  mostraMensaje(): string{
     return this.mensaje;
   }
   constructor() { }

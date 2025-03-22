@@ -1,4 +1,20 @@
 
 <app-component-hijo></app-component-hijo>
+<p>Componente Padre</p>
+<div>
+    <app-component-hijo></app-component-hijo>
+    <button class="btn btn-primary mt-3" (click)="cambiarMensajeHijo()">Cambiar Mensaje del hijo</button>
+</div>
+<app-component-hijo [mensajesinput]="mensajePadre"></app-component-hijo>
+<div>
+    <h3 class="text-primary">Componente Padre con Output</h3>
+    <app-component-hijo (notificarPadre)="recibirNotificacion($event)"></app-component-hijo>
+
+    @if (mensajeOutput) {
+        <p class="mt-3 alert alert-info w-50 mx-auto">{{mensajeOutput}}</p> 
+    }
+</div>
+
+
 
 

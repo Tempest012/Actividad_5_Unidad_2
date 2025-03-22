@@ -9,9 +9,11 @@ import { MensajesServiceService } from '../service/mensajes-service.service';
 })
 export class MENSAJESComponent {
 
+  titulo="Servicios en Angular";
   mensaje !: string;
-  constructor(mostra : MensajesServiceService){
-    this.mensaje =mostra.mostraMensaje();
+
+  constructor(private mostra : MensajesServiceService){
+    this.mensaje = this.mostra.mostraMensaje();
   }
   
 

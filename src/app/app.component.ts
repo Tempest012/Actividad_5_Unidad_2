@@ -7,15 +7,17 @@ import { ReplicadorComponent } from './replicador/replicador.component';
 import { Replicador2Component } from './replicador/replicador2/replicador2.component';
 import { ForComponent } from './for/for.component';
 import { MENSAJESComponent } from './mensajes/mensajes.component';
+import { ListadoUsuariosComponent } from './component/listado-usuarios/listado-usuarios.component';
+import { MensajesServiceService } from './service/mensajes-service.service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,TarjetaProductoComponent,MostrarMensajeComponent,ReplicadorComponent,Replicador2Component,ForComponent,MENSAJESComponent],
+  imports: [RouterOutlet,TarjetaProductoComponent,MostrarMensajeComponent,ReplicadorComponent,Replicador2Component,ForComponent,MENSAJESComponent,ListadoUsuariosComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  titulo= 'Orgullo UTS';
+  titulo= 'Servicios con Observables en Angular';
   usuario={
     firstName: "Harol Adrian",
     lastName: "Cisneros Bojorquez",
